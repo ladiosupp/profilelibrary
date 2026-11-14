@@ -1,12 +1,39 @@
-# Profiles Library 2.0 — Work Handoff
+# Profiles Library 2.0.1 — Work Handoff
 
 ## Project
 A Decaid plugin named **Profiles Library**. Its product scope is intentionally narrow: discover profile libraries and import profiles into Decaid. It must not activate profiles, start shots, edit machine state, delete profiles, or become a profile editor.
 
+## 2.0.1 (2026-11-14) — skin integration, no import-pipeline changes
+
+Problem: 2.0.0 had no close/back affordance. Streamline opens plugin pages as an
+overlay only when the page sends `streamline:ready`; 2.0.0 never sent it, so the
+overlay timed out (3 s) and fell back to full-page navigation, and the page ignored
+the `returnTo` param — a dead end with no way back to the skin.
+
+Changes (plugin side only; skin/host untouched):
+1. Head boot script: when `embed=1`, post `{type:'streamline:ready'}` to parent,
+   add `html.embedded`, and pin the palette to the skin's `theme` param via a
+   late `html:root` override (beats the `prefers-color-scheme` media block).
+2. New `skin` HTTP endpoint (declared in manifest): answers
+   `{version:1,surfaces:[],settingsOpen:{type:'open',presentation:'overlay',closeOnShot:true}}`.
+   Streamline's Settings > Extensions Open now opens the page in its dialog
+   (skin draws the ×, backdrop tap closes, overlay auto-closes on shot start).
+   Verified against the real `parseSkinAnswer` in streamline.js plugin-surfaces.js.
+3. Full-page mode: ← Back button reads `returnTo` (http/https only), falls back to
+   `history.back()`; hidden when embedded or when there is nowhere to go.
+4. Embedded mode scrolls inside `main` (body overflow hidden) with palette-styled
+   scrollbars; toast gets a shadow so it reads on the light palette.
+
+Verified locally (mock Decaid API + headless Chromium, harness in
+`D:/vscode/.tools/profilelibrary-check/`): ready handshake keeps overlay open;
+× and backdrop close; dark/light theme follow; main scrolls; Back returns via
+returnTo and via history; javascript: returnTo rejected; Import regression OK.
+Real-machine install confirmation pending. Keep 2.0.0 zip for rollback.
+
 ## Current release
-- Version: **2.0.0**
+- Version: **2.0.1** (previous working: 2.0.0)
 - Plugin id: `profiles-library.reaplugin`
-- Release artifact: `release/Profiles_Library_v2.0.0.reaplugin.zip`
+- Release artifact: `release/Profiles_Library_v2.0.1.reaplugin.zip` (2.0.0 kept for rollback)
 - Current source is the exact content extracted from that working release ZIP in `source/`.
 
 ## Confirmed working state
