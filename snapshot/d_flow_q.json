@@ -1,0 +1,63 @@
+{
+  "version": "2",
+  "title": "D-Flow / Q",
+  "author": "Damian",
+  "notes": "D-Flow Q everyday profile.",
+  "beverage_type": "espresso",
+  "steps": [
+    {
+      "name": "Filling",
+      "pump": "pressure",
+      "transition": "fast",
+      "temperature": "84",
+      "sensor": "coffee",
+      "seconds": "25",
+      "volume": "60",
+      "pressure": "6",
+      "flow": "8",
+      "exit": {
+        "type": "pressure",
+        "condition": "over",
+        "value": "3"
+      },
+      "limiter": {
+        "value": "0",
+        "range": "0.2"
+      }
+    },
+    {
+      "name": "Infusing",
+      "pump": "pressure",
+      "transition": "fast",
+      "temperature": "94",
+      "sensor": "coffee",
+      "seconds": "1",
+      "volume": "100",
+      "pressure": "6",
+      "flow": "8",
+      "limiter": {
+        "value": "0",
+        "range": "0.2"
+      }
+    },
+    {
+      "name": "Pouring",
+      "pump": "flow",
+      "transition": "fast",
+      "temperature": "94",
+      "sensor": "coffee",
+      "seconds": "127",
+      "volume": "100",
+      "flow": "1.8",
+      "pressure": "4.8",
+      "limiter": {
+        "value": "10",
+        "range": "0.2"
+      }
+    }
+  ],
+  "tank_temperature": "0",
+  "target_weight": "36",
+  "target_volume": "0",
+  "target_volume_count_start": "2"
+}

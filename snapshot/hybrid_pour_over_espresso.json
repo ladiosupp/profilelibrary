@@ -1,0 +1,63 @@
+{
+  "version": "2",
+  "title": "Hybrid pour over espresso",
+  "author": "Decent",
+  "notes": "Fine-grind hybrid pour-over/espresso flow profile.",
+  "beverage_type": "espresso",
+  "steps": [
+    {
+      "name": "preinfusion",
+      "pump": "flow",
+      "transition": "fast",
+      "temperature": "92",
+      "sensor": "coffee",
+      "seconds": "25",
+      "volume": "0",
+      "flow": "2",
+      "pressure": "1",
+      "exit": {
+        "type": "pressure",
+        "condition": "over",
+        "value": "1.5"
+      },
+      "limiter": {
+        "value": "0",
+        "range": "0.6"
+      }
+    },
+    {
+      "name": "hold",
+      "pump": "flow",
+      "transition": "fast",
+      "temperature": "92",
+      "sensor": "coffee",
+      "seconds": "20",
+      "volume": "0",
+      "flow": "2.2",
+      "pressure": "0",
+      "limiter": {
+        "value": "0",
+        "range": "0.6"
+      }
+    },
+    {
+      "name": "decline",
+      "pump": "flow",
+      "transition": "smooth",
+      "temperature": "92",
+      "sensor": "coffee",
+      "seconds": "0",
+      "volume": "0",
+      "flow": "1.8",
+      "pressure": "0",
+      "limiter": {
+        "value": "0",
+        "range": "0.6"
+      }
+    }
+  ],
+  "tank_temperature": "0",
+  "target_weight": "36",
+  "target_volume": "0",
+  "target_volume_count_start": "1"
+}

@@ -1,0 +1,64 @@
+{
+  "version": "2",
+  "title": "D-Flow / La Pavoni",
+  "author": "Damian",
+  "notes": "D-Flow lever-style La Pavoni simulation.",
+  "beverage_type": "espresso",
+  "steps": [
+    {
+      "name": "Filling",
+      "pump": "pressure",
+      "transition": "fast",
+      "temperature": "84",
+      "sensor": "coffee",
+      "seconds": "25",
+      "volume": "60",
+      "pressure": "1.2",
+      "flow": "8",
+      "exit": {
+        "type": "pressure",
+        "condition": "over",
+        "value": "1.2"
+      },
+      "limiter": {
+        "value": "0",
+        "range": "0.2"
+      }
+    },
+    {
+      "name": "Infusing",
+      "pump": "pressure",
+      "transition": "fast",
+      "temperature": "94",
+      "sensor": "coffee",
+      "seconds": "60",
+      "volume": "100",
+      "pressure": "1.2",
+      "flow": "8",
+      "weight": "0.2",
+      "limiter": {
+        "value": "0",
+        "range": "0.2"
+      }
+    },
+    {
+      "name": "Pouring",
+      "pump": "flow",
+      "transition": "fast",
+      "temperature": "94",
+      "sensor": "coffee",
+      "seconds": "127",
+      "volume": "100",
+      "flow": "2.4",
+      "pressure": "4.8",
+      "limiter": {
+        "value": "9",
+        "range": "0.2"
+      }
+    }
+  ],
+  "tank_temperature": "0",
+  "target_weight": "46",
+  "target_volume": "0",
+  "target_volume_count_start": "2"
+}

@@ -1,0 +1,78 @@
+{
+  "version": "2",
+  "title": "Low pressure lever machine at 6 bar",
+  "author": "Decent",
+  "notes": "Classic low-pressure lever-style profile.",
+  "beverage_type": "espresso",
+  "steps": [
+    {
+      "name": "preinfusion",
+      "pump": "flow",
+      "transition": "fast",
+      "temperature": "94",
+      "sensor": "coffee",
+      "seconds": "20",
+      "volume": "0",
+      "flow": "4.5",
+      "pressure": "1",
+      "exit": {
+        "type": "pressure",
+        "condition": "over",
+        "value": "4"
+      },
+      "limiter": {
+        "value": "0",
+        "range": "0.6"
+      }
+    },
+    {
+      "name": "forced rise without limit",
+      "pump": "pressure",
+      "transition": "fast",
+      "temperature": "94",
+      "sensor": "coffee",
+      "seconds": "3",
+      "volume": "0",
+      "pressure": "6",
+      "flow": "0",
+      "limiter": {
+        "value": "0",
+        "range": "0.6"
+      }
+    },
+    {
+      "name": "rise and hold",
+      "pump": "pressure",
+      "transition": "fast",
+      "temperature": "94",
+      "sensor": "coffee",
+      "seconds": "5",
+      "volume": "0",
+      "pressure": "6",
+      "flow": "0",
+      "limiter": {
+        "value": "0",
+        "range": "0.6"
+      }
+    },
+    {
+      "name": "decline",
+      "pump": "pressure",
+      "transition": "smooth",
+      "temperature": "94",
+      "sensor": "coffee",
+      "seconds": "27",
+      "volume": "0",
+      "pressure": "0",
+      "flow": "0",
+      "limiter": {
+        "value": "0",
+        "range": "0.6"
+      }
+    }
+  ],
+  "tank_temperature": "0",
+  "target_weight": "36",
+  "target_volume": "36",
+  "target_volume_count_start": "2"
+}

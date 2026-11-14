@@ -1,0 +1,54 @@
+{
+  "id": "profiles-library.reaplugin",
+  "author": "OpenAI GPT-5.6 Sol",
+  "name": "Profiles Library",
+  "description": "Offline snapshot + online Decent profile search and one-tap import for Decaid.",
+  "version": "2.0.0",
+  "apiVersion": 1,
+  "permissions": [
+    "log",
+    "api"
+  ],
+  "api": [
+    {
+      "id": "ui",
+      "type": "http",
+      "data": {
+        "body": {
+          "type": "string",
+          "description": "Profiles Library UI"
+        }
+      }
+    },
+    {
+      "id": "catalog",
+      "type": "http",
+      "data": {
+        "body": {
+          "type": "string",
+          "description": "Merged local/offline/online catalog"
+        }
+      }
+    },
+    {
+      "id": "refresh",
+      "type": "http",
+      "data": {
+        "body": {
+          "type": "string",
+          "description": "Refresh public online sources and installed skins"
+        }
+      }
+    },
+    {
+      "id": "import",
+      "type": "http",
+      "data": {
+        "body": {
+          "type": "string",
+          "description": "Import one profile into Decaid"
+        }
+      }
+    }
+  ]
+}

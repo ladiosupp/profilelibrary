@@ -1,0 +1,155 @@
+[
+  {
+    "title": "E61 espresso machine",
+    "name": "Decenza public profile library",
+    "repository": "Kulitorum/Decenza",
+    "path": "resources/profiles/e61_espresso_machine.json",
+    "sha": "cde15180100fa2564d61b478894a196264f745af",
+    "snapshotDate": "2026-10-25",
+    "format": "json"
+  },
+  {
+    "title": "E61 rocketing up to 10 bar",
+    "name": "Decenza public profile library",
+    "repository": "Kulitorum/Decenza",
+    "path": "resources/profiles/e61_rocketing_up_to_10_bar.json",
+    "sha": "b53841c5f849b31bbfec89d1c1a917d601397254",
+    "snapshotDate": "2026-10-25",
+    "format": "json"
+  },
+  {
+    "title": "E61 classic gently up to 10 bar",
+    "name": "Decenza public profile library",
+    "repository": "Kulitorum/Decenza",
+    "path": "resources/profiles/e61_classic_gently_up_to_10_bar.json",
+    "sha": "3b916a67d94341fce4110d84c0693da4ed7a0468",
+    "snapshotDate": "2026-10-25",
+    "format": "json"
+  },
+  {
+    "title": "E61 with fast preinfusion to 9 bar",
+    "name": "Decenza public profile library",
+    "repository": "Kulitorum/Decenza",
+    "path": "resources/profiles/e61_with_fast_preinfusion_to_9_bar.json",
+    "sha": "2e4cd66821c1f46a0472d62070b7378763f934f1",
+    "snapshotDate": "2026-10-25",
+    "format": "json"
+  },
+  {
+    "title": "Adaptive v3",
+    "name": "Decenza public profile library",
+    "repository": "Kulitorum/Decenza",
+    "path": "resources/profiles/adaptive_v3.json",
+    "sha": "8f94ec3c29bbe2a7b2473eed1eaa9e0fc583f192",
+    "snapshotDate": "2026-10-25",
+    "format": "json"
+  },
+  {
+    "title": "Best overall pressure profile",
+    "name": "Decenza public profile library",
+    "repository": "Kulitorum/Decenza",
+    "path": "resources/profiles/best_overall_pressure_profile.json",
+    "sha": "fd638ef8b9563fa8db19a2eff37b172b28bd5f2f",
+    "snapshotDate": "2026-10-25",
+    "format": "json"
+  },
+  {
+    "title": "D-Flow / La Pavoni",
+    "name": "Decenza public profile library",
+    "repository": "Kulitorum/Decenza",
+    "path": "resources/profiles/d_flow_la_pavoni.json",
+    "sha": "07c26c4b4b3783ab6c62107457063423139a6c80",
+    "snapshotDate": "2026-10-25",
+    "format": "json"
+  },
+  {
+    "title": "D-Flow / Q",
+    "name": "Decenza public profile library",
+    "repository": "Kulitorum/Decenza",
+    "path": "resources/profiles/d_flow_q.json",
+    "sha": "aed28ad4fea7d7418440fa2fcf21b47f2e841ff4",
+    "snapshotDate": "2026-10-25",
+    "format": "json"
+  },
+  {
+    "title": "Turbo Shot",
+    "name": "Decenza public profile library",
+    "repository": "Kulitorum/Decenza",
+    "path": "resources/profiles/turbo_shot.json",
+    "sha": "731423423624e85e18a56464043a8d6806855fbb",
+    "snapshotDate": "2026-10-25",
+    "format": "json"
+  },
+  {
+    "title": "Gentle flat 2.5 ml per second",
+    "name": "Decenza public profile library",
+    "repository": "Kulitorum/Decenza",
+    "path": "resources/profiles/gentle_flat_2_5_ml_per_second.json",
+    "sha": "b9118aab2d36840bd31f4f7cc881440d34afd2e4",
+    "snapshotDate": "2026-10-25",
+    "format": "json"
+  },
+  {
+    "title": "Gentle preinfusion flow profile",
+    "name": "Decenza public profile library",
+    "repository": "Kulitorum/Decenza",
+    "path": "resources/profiles/gentle_preinfusion_flow_profile.json",
+    "sha": "a79e545dc1074216d98a096a83553ea7a7f46cde",
+    "snapshotDate": "2026-10-25",
+    "format": "json"
+  },
+  {
+    "title": "Hybrid pour over espresso",
+    "name": "Decenza public profile library",
+    "repository": "Kulitorum/Decenza",
+    "path": "resources/profiles/hybrid_pour_over_espresso.json",
+    "sha": "ef453364143986226eca78ae022cb90bbf4236ea",
+    "snapshotDate": "2026-10-25",
+    "format": "json"
+  },
+  {
+    "title": "Italian Australian espresso",
+    "name": "Decenza public profile library",
+    "repository": "Kulitorum/Decenza",
+    "path": "resources/profiles/italian_australian_espresso.json",
+    "sha": "5f2955a8e28d62a5b185fab9ae7b8e365a47d28f",
+    "snapshotDate": "2026-10-25",
+    "format": "json"
+  },
+  {
+    "title": "Low pressure lever machine at 6 bar",
+    "name": "Decenza public profile library",
+    "repository": "Kulitorum/Decenza",
+    "path": "resources/profiles/low_pressure_lever_machine_at_6_bar.json",
+    "sha": "0232fb2ec275d78edd35fe09f61d346208b90eaa",
+    "snapshotDate": "2026-10-25",
+    "format": "json"
+  },
+  {
+    "title": "Gentler but still traditional 8.4 bar",
+    "name": "Decenza public profile library",
+    "repository": "Kulitorum/Decenza",
+    "path": "resources/profiles/gentler_but_still_traditional_8_4_bar.json",
+    "sha": "7ef656e5ee3cb2db37ca1bcb859ae9a13c0118d3",
+    "snapshotDate": "2026-10-25",
+    "format": "json"
+  },
+  {
+    "title": "GHC/manual flow control",
+    "name": "Decenza public profile library",
+    "repository": "Kulitorum/Decenza",
+    "path": "resources/profiles/ghc_manual_flow_control.json",
+    "sha": "02ea2eaf788053ae468e305450abda2abf7e954a",
+    "snapshotDate": "2026-10-25",
+    "format": "json"
+  },
+  {
+    "title": "GHC/manual pressure control",
+    "name": "Decenza public profile library",
+    "repository": "Kulitorum/Decenza",
+    "path": "resources/profiles/ghc_manual_pressure_control.json",
+    "sha": "f2e7670d69518eb6dd1c98ca4c92ed558f42017e",
+    "snapshotDate": "2026-10-25",
+    "format": "json"
+  }
+]

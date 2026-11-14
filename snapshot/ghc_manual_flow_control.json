@@ -1,0 +1,43 @@
+{
+  "version": "2",
+  "title": "GHC/manual flow control",
+  "author": "Decent",
+  "notes": "Manual flow control for GHC-equipped machines.",
+  "beverage_type": "manual",
+  "steps": [
+    {
+      "name": "hold",
+      "pump": "flow",
+      "transition": "fast",
+      "temperature": "88",
+      "sensor": "coffee",
+      "seconds": "60",
+      "volume": "0",
+      "flow": "0",
+      "pressure": "0",
+      "limiter": {
+        "value": "9",
+        "range": "0.9"
+      }
+    },
+    {
+      "name": "decline",
+      "pump": "flow",
+      "transition": "smooth",
+      "temperature": "88",
+      "sensor": "coffee",
+      "seconds": "60",
+      "volume": "0",
+      "flow": "0",
+      "pressure": "0",
+      "limiter": {
+        "value": "9",
+        "range": "0.9"
+      }
+    }
+  ],
+  "tank_temperature": "0",
+  "target_weight": "0",
+  "target_volume": "0",
+  "target_volume_count_start": "0"
+}

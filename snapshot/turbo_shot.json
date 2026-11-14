@@ -1,0 +1,49 @@
+{
+  "version": "2",
+  "title": "Turbo Shot",
+  "author": "Decenza",
+  "notes": "High-flow turbo extraction.",
+  "beverage_type": "espresso",
+  "steps": [
+    {
+      "name": "Preinfusion",
+      "pump": "flow",
+      "transition": "fast",
+      "temperature": "90",
+      "sensor": "coffee",
+      "seconds": "5",
+      "volume": "0",
+      "flow": "8",
+      "pressure": "6",
+      "exit": {
+        "type": "pressure",
+        "condition": "over",
+        "value": "2"
+      },
+      "limiter": {
+        "value": "4",
+        "range": "0.2"
+      }
+    },
+    {
+      "name": "Turbo",
+      "pump": "flow",
+      "transition": "fast",
+      "temperature": "90",
+      "sensor": "coffee",
+      "seconds": "25",
+      "volume": "0",
+      "flow": "4.5",
+      "pressure": "6",
+      "weight": "45",
+      "limiter": {
+        "value": "6",
+        "range": "0.2"
+      }
+    }
+  ],
+  "tank_temperature": "0",
+  "target_weight": "39",
+  "target_volume": "0",
+  "target_volume_count_start": "1"
+}

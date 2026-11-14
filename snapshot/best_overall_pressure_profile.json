@@ -1,0 +1,98 @@
+{
+  "version": "2",
+  "title": "Best overall pressure profile",
+  "author": "Decent",
+  "notes": "General-purpose declining pressure profile.",
+  "beverage_type": "espresso",
+  "steps": [
+    {
+      "name": "preinfusion temp boost",
+      "pump": "flow",
+      "transition": "fast",
+      "temperature": "88",
+      "sensor": "coffee",
+      "seconds": "2",
+      "volume": "0",
+      "flow": "8",
+      "pressure": "1",
+      "exit": {
+        "type": "pressure",
+        "condition": "over",
+        "value": "4"
+      },
+      "limiter": {
+        "value": "0",
+        "range": "0.6"
+      }
+    },
+    {
+      "name": "preinfusion",
+      "pump": "flow",
+      "transition": "fast",
+      "temperature": "88",
+      "sensor": "coffee",
+      "seconds": "18",
+      "volume": "0",
+      "flow": "8",
+      "pressure": "1",
+      "exit": {
+        "type": "pressure",
+        "condition": "over",
+        "value": "4"
+      },
+      "limiter": {
+        "value": "0",
+        "range": "0.6"
+      }
+    },
+    {
+      "name": "forced rise",
+      "pump": "pressure",
+      "transition": "fast",
+      "temperature": "88",
+      "sensor": "coffee",
+      "seconds": "3",
+      "volume": "0",
+      "pressure": "8.4",
+      "flow": "0",
+      "limiter": {
+        "value": "3.5",
+        "range": "1"
+      }
+    },
+    {
+      "name": "rise and hold",
+      "pump": "pressure",
+      "transition": "fast",
+      "temperature": "88",
+      "sensor": "coffee",
+      "seconds": "7",
+      "volume": "0",
+      "pressure": "8.4",
+      "flow": "0",
+      "limiter": {
+        "value": "3.5",
+        "range": "1"
+      }
+    },
+    {
+      "name": "decline",
+      "pump": "pressure",
+      "transition": "smooth",
+      "temperature": "88",
+      "sensor": "coffee",
+      "seconds": "30",
+      "volume": "0",
+      "pressure": "6",
+      "flow": "0",
+      "limiter": {
+        "value": "3.5",
+        "range": "1"
+      }
+    }
+  ],
+  "tank_temperature": "0",
+  "target_weight": "36",
+  "target_volume": "36",
+  "target_volume_count_start": "3"
+}
