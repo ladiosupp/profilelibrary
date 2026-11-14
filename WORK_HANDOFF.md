@@ -1,9 +1,33 @@
-# Profiles Library 2.0.1 — Work Handoff
+# Profiles Library 2.0.3 — Work Handoff
 
 ## Project
 A Decaid plugin named **Profiles Library**. Its product scope is intentionally narrow: discover profile libraries and import profiles into Decaid. It must not activate profiles, start shots, edit machine state, delete profiles, or become a profile editor.
 
-## 2.0.1 (2026-11-14) — skin integration, no import-pipeline changes
+## 2.0.3 (2026-11-14) — merge tablet-only 2.0.2 lineage + skin integration
+
+Discovered during the 2.0.1 tablet install: the tablet ran a **2.0.2 local_zip**
+(installed 2026-10-25) from a parallel lineage never pushed to this repo —
+2.0.1 added strict import validation / quoted-Tcl parsing / request deadlines,
+2.0.2 added target thumbnails + embedded DEFAULT_PREVIEWS (73 official defaults,
+decaid commit f2248a7) + lazy online previews + per-card retry. Installing the
+repo-based 2.0.1 would have dropped all of that.
+
+Resolution: pulled the original `Profiles_Library_v2.0.2.reaplugin.zip` from the
+tablet's /sdcard/Download via adb, imported it as the new base (plugin.js,
+manifest, default-previews.json, README/SOURCES), and re-applied the four skin
+integration changes verbatim on top → **2.0.3**. The v2.0.1 GitHub release stays
+as the repo-lineage version; 2.0.3 supersedes it and is what the tablet installs.
+
+2.0.3 = 2.0.2 feature set + (1) streamline:ready handshake + skin endpoint
+(settingsOpen overlay, closeOnShot), (2) full-page ← Back via returnTo/history,
+(3) embed theme pinning, (4) embedded main-scroll + palette scrollbars + toast
+shadow. Import/preview pipelines untouched from 2.0.2.
+
+Verified: mock + headless Chromium (overlay handshake/close/theme/scroll,
+preview SVG thumbnails render inside overlay, Back navigation, import regression);
+skin answer accepted by real Streamline parseSkinAnswer. Tablet install pending.
+
+## 2.0.1 (2026-11-14) — skin integration on the 2.0.0 repo base (superseded by 2.0.3)
 
 Problem: 2.0.0 had no close/back affordance. Streamline opens plugin pages as an
 overlay only when the page sends `streamline:ready`; 2.0.0 never sent it, so the
@@ -30,10 +54,12 @@ Verified locally (mock Decaid API + headless Chromium, harness in
 returnTo and via history; javascript: returnTo rejected; Import regression OK.
 Real-machine install confirmation pending. Keep 2.0.0 zip for rollback.
 
+- Version: **2.0.1** (previous working: 2.0.0)
 ## Current release
+- Version: **2.0.3** (base: tablet 2.0.2 lineage; repo baseline 2.0.0 kept for rollback)
 - Version: **2.0.1** (previous working: 2.0.0)
 - Plugin id: `profiles-library.reaplugin`
-- Release artifact: `release/Profiles_Library_v2.0.1.reaplugin.zip` (2.0.0 kept for rollback)
+- Release artifact: `release/Profiles_Library_v2.0.3.reaplugin.zip` (2.0.0 kept for rollback; v2.0.1 release superseded)
 - Current source is the exact content extracted from that working release ZIP in `source/`.
 
 ## Confirmed working state
